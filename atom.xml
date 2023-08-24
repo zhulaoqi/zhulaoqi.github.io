@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>花田半亩</title>
+  <icon>https://zhulaoqi.github.io/icon.png</icon>
+  <subtitle>我们的一生是被欺骗的一生。在叠错的谎言中，悲伤莫名，幸福莫名</subtitle>
+  <link href="https://zhulaoqi.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://zhulaoqi.github.io/"/>
+  <updated>2023-08-24T02:28:16.971Z</updated>
+  <id>https://zhulaoqi.github.io/</id>
+  
+  <author>
+    <name>kinch.zhu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://zhulaoqi.github.io/2023/08/24/hello-world/"/>
+    <id>https://zhulaoqi.github.io/2023/08/24/hello-world/</id>
+    <published>2023-08-24T02:28:16.971Z</published>
+    <updated>2023-08-24T02:28:16.971Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
