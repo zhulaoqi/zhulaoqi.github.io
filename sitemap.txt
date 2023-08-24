@@ -1,2 +1,7 @@
+https://zhulaoqi.github.io/schedule/index.html
+https://zhulaoqi.github.io/tags/index.html
+https://zhulaoqi.github.io/categories/index.html
+https://zhulaoqi.github.io/archives/index.html
+https://zhulaoqi.github.io/about/index.html
 https://zhulaoqi.github.io/2023/08/24/hello-world/
 https://zhulaoqi.github.io/
