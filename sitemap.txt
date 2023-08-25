@@ -1,3 +1,4 @@
+https://zhulaoqi.github.io/2023/08/25/%E9%A3%9E%E4%B9%A6%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85/
 https://zhulaoqi.github.io/tags/index.html
 https://zhulaoqi.github.io/lib/canvas-ribbon/README.html
 https://zhulaoqi.github.io/schedule/index.html
@@ -6,3 +7,5 @@ https://zhulaoqi.github.io/about/index.html
 https://zhulaoqi.github.io/archives/index.html
 https://zhulaoqi.github.io/2023/08/24/hello-world/
 https://zhulaoqi.github.io/
+https://zhulaoqi.github.io/tags/%E6%8A%80%E6%9C%AF%E8%AE%BE%E8%AE%A1/
+https://zhulaoqi.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/

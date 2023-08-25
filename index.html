@@ -134,17 +134,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">1</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">1</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -205,6 +205,129 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zhulaoqi.github.io/2023/08/25/%E9%A3%9E%E4%B9%A6%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="kinch.zhu">
+      <meta itemprop="description" content="独有英雄驱虎豹，更无豪杰怕熊罴（pi）。梅花欢喜漫天雪，冻死苍蝇未足奇。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="花田半亩">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/08/25/%E9%A3%9E%E4%B9%A6%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85/" class="post-title-link" itemprop="url">飞书机器人消息订阅1</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-08-25 18:47:32 / 修改时间：18:54:22" itemprop="dateCreated datePublished" datetime="2023-08-25T18:47:32+08:00">2023-08-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">设计文档</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>695</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>背景</p>
+<p>知识库Ai回答现在采用了和机器人直接对话的技术实现方式，为了支持后期知识库回答准确性做优化依据，现在需要将各个用户跟机器人的对话消息按照对话的方式，以时间单位作为切分进行存储并做合理展示，实现高效协同持续优化的目的</p>
+</blockquote>
+<h1 id="术语规范"><a href="#术语规范" class="headerlink" title="术语规范"></a>术语规范</h1><table>
+<thead>
+<tr>
+<th>名词</th>
+<th>英文表示</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>日期</td>
+<td>msgDate</td>
+<td>一个会话时间段，从开始对话到对话结束十分钟</td>
+</tr>
+<tr>
+<td>sessionid</td>
+<td>sessionId</td>
+<td>后端主动生成的唯一ID</td>
+</tr>
+</tbody></table>
+<h1 id="接口列表"><a href="#接口列表" class="headerlink" title="接口列表"></a>接口列表</h1><ul>
+<li>获取会话记录列表</li>
+<li>获取当前会话中的消息记录</li>
+</ul>
+<h1 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h1><p><a target="_blank" rel="noopener" href="https://open.feishu.cn/document/server-docs/im-v1/message/list">获取会话历史消息 - 服务端 API - 开发文档 - 飞书开放平台</a></p>
+<p>以上为飞书开放API获取历史消息</p>
+<h1 id="消息AI回答时序"><a href="#消息AI回答时序" class="headerlink" title="消息AI回答时序"></a>消息AI回答时序</h1><p>![image-20230825185217814](&#x2F;Users&#x2F;zhujinqi&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20230825185217814.png)</p>
+<h1 id="消息记录流程"><a href="#消息记录流程" class="headerlink" title="消息记录流程"></a>消息记录流程</h1><p>![image-20230825185255613](&#x2F;Users&#x2F;zhujinqi&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20230825185255613.png)</p>
+<h1 id="工作内容"><a href="#工作内容" class="headerlink" title="工作内容"></a>工作内容</h1><h2 id="技术设施准备"><a href="#技术设施准备" class="headerlink" title="技术设施准备"></a>技术设施准备</h2><ul>
+<li>表设计、创建</li>
+<li>基础代码开发</li>
+</ul>
+<h2 id="代码逻辑开发"><a href="#代码逻辑开发" class="headerlink" title="代码逻辑开发"></a>代码逻辑开发</h2><ol>
+<li>数据存储逻辑开发</li>
+<li>展示接口开发</li>
+<li>展示页面开发</li>
+</ol>
+<h1 id="补偿方案"><a href="#补偿方案" class="headerlink" title="补偿方案"></a>补偿方案</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd logs/data</span><br><span class="line">pwd</span><br><span class="line">/dianyi/app/bugoo/logs/data</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/dianyi/app/bugoo/logs/data/data.json</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -622,9 +745,21 @@ if(canvas.getContext){
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -663,12 +798,12 @@ if(canvas.getContext){
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">0k</span>
+    <span title="站点总字数">1k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">2 分钟</span>
 </div><script color="0,0,0" opacity="0.6" zIndex="-1" count="110" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
 
 
@@ -677,7 +812,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共75字</span>
+  <span class="post-count">博客全站共407字</span>
 </div>
 
 

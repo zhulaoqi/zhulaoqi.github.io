@@ -18,4 +18,57 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>飞书机器人消息订阅1</title>
+    <url>/2023/08/25/%E9%A3%9E%E4%B9%A6%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85/</url>
+    <content><![CDATA[<blockquote>
+<p>背景</p>
+<p>知识库Ai回答现在采用了和机器人直接对话的技术实现方式，为了支持后期知识库回答准确性做优化依据，现在需要将各个用户跟机器人的对话消息按照对话的方式，以时间单位作为切分进行存储并做合理展示，实现高效协同持续优化的目的</p>
+</blockquote>
+<h1 id="术语规范"><a href="#术语规范" class="headerlink" title="术语规范"></a>术语规范</h1><table>
+<thead>
+<tr>
+<th>名词</th>
+<th>英文表示</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>日期</td>
+<td>msgDate</td>
+<td>一个会话时间段，从开始对话到对话结束十分钟</td>
+</tr>
+<tr>
+<td>sessionid</td>
+<td>sessionId</td>
+<td>后端主动生成的唯一ID</td>
+</tr>
+</tbody></table>
+<h1 id="接口列表"><a href="#接口列表" class="headerlink" title="接口列表"></a>接口列表</h1><ul>
+<li>获取会话记录列表</li>
+<li>获取当前会话中的消息记录</li>
+</ul>
+<h1 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h1><p><a href="https://open.feishu.cn/document/server-docs/im-v1/message/list">获取会话历史消息 - 服务端 API - 开发文档 - 飞书开放平台</a></p>
+<p>以上为飞书开放API获取历史消息</p>
+<h1 id="消息AI回答时序"><a href="#消息AI回答时序" class="headerlink" title="消息AI回答时序"></a>消息AI回答时序</h1><p>![image-20230825185217814](&#x2F;Users&#x2F;zhujinqi&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20230825185217814.png)</p>
+<h1 id="消息记录流程"><a href="#消息记录流程" class="headerlink" title="消息记录流程"></a>消息记录流程</h1><p>![image-20230825185255613](&#x2F;Users&#x2F;zhujinqi&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20230825185255613.png)</p>
+<h1 id="工作内容"><a href="#工作内容" class="headerlink" title="工作内容"></a>工作内容</h1><h2 id="技术设施准备"><a href="#技术设施准备" class="headerlink" title="技术设施准备"></a>技术设施准备</h2><ul>
+<li>表设计、创建</li>
+<li>基础代码开发</li>
+</ul>
+<h2 id="代码逻辑开发"><a href="#代码逻辑开发" class="headerlink" title="代码逻辑开发"></a>代码逻辑开发</h2><ol>
+<li>数据存储逻辑开发</li>
+<li>展示接口开发</li>
+<li>展示页面开发</li>
+</ol>
+<h1 id="补偿方案"><a href="#补偿方案" class="headerlink" title="补偿方案"></a>补偿方案</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd logs/data</span><br><span class="line">pwd</span><br><span class="line">/dianyi/app/bugoo/logs/data</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/dianyi/app/bugoo/logs/data/data.json</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>设计文档</category>
+      </categories>
+      <tags>
+        <tag>技术设计</tag>
+      </tags>
+  </entry>
 </search>

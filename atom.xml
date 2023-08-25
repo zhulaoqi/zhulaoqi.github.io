@@ -6,7 +6,7 @@
   <link href="https://zhulaoqi.github.io/atom.xml" rel="self"/>
   
   <link href="https://zhulaoqi.github.io/"/>
-  <updated>2023-08-24T02:28:16.971Z</updated>
+  <updated>2023-08-25T10:54:22.160Z</updated>
   <id>https://zhulaoqi.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>飞书机器人消息订阅1</title>
+    <link href="https://zhulaoqi.github.io/2023/08/25/%E9%A3%9E%E4%B9%A6%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85/"/>
+    <id>https://zhulaoqi.github.io/2023/08/25/%E9%A3%9E%E4%B9%A6%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85/</id>
+    <published>2023-08-25T10:47:32.000Z</published>
+    <updated>2023-08-25T10:54:22.160Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;背景&lt;/p&gt;
+&lt;p&gt;知识库Ai回答现在采用了和机器人直接对话的技术实现方式，为了支持后期知识库回答准确性做优化依据，现在需要将各个用户跟机器人的对话消息按照对话的方式，以时间单位作为切分进行存储并做合理展示，实现高效协同持续优化的目的&lt;/p&gt;
+&lt;/</summary>
+        
+      
+    
+    
+    
+    <category term="设计文档" scheme="https://zhulaoqi.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/"/>
+    
+    
+    <category term="技术设计" scheme="https://zhulaoqi.github.io/tags/%E6%8A%80%E6%9C%AF%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
