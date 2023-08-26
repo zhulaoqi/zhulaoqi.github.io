@@ -24,16 +24,29 @@
     <updated>2023-08-25T10:54:22.160Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;背景&lt;/p&gt;
 &lt;p&gt;知识库Ai回答现在采用了和机器人直接对话的技术实现方式，为了支持后期知识库回答准确性做优化依据，现在需要将各个用户跟机器人的对话消息按照对话的方式，以时间单位作为切分进行存储并做合理展示，实现高效协同持续优化的目的&lt;/p&gt;
-&lt;/</summary>
-        
-      
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;术语规范&quot;&gt;&lt;a href=&quot;#术语规范&quot; class=&quot;headerlink&quot; title=&quot;术语规范&quot;&gt;&lt;/a&gt;术语规范&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名词&lt;/th&gt;
+&lt;th&gt;英文表示&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;日期&lt;/td&gt;
+&lt;td&gt;msgDate&lt;/td&gt;
+&lt;td&gt;一个会话时间段，从开始对话到对话结束十分钟&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sessionid&lt;/td&gt;
+&lt;td&gt;sessionId&lt;/td&gt;
+&lt;td&gt;后端主动生成的唯一ID&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;</summary>
     
     
     
@@ -52,13 +65,8 @@
     <updated>2023-08-24T02:28:16.971Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;</summary>
     
     
     
