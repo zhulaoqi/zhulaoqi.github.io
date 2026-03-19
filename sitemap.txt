@@ -1,3 +1,5 @@
+https://zhulaoqi.github.io/2026/03/19/Hexo%E5%8D%9A%E5%AE%A2%E5%BF%AB%E9%80%9F%E5%86%99%E4%BD%9C%E4%B8%8E%E5%8F%91%E5%B8%83%E6%8C%87%E5%8D%97/
+https://zhulaoqi.github.io/2026/03/19/RAG%E5%B7%B2%E6%AD%BB-LangChain%E8%BF%87%E6%97%B6-%E4%B8%80%E4%B8%AA%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%86%B7%E9%9D%99%E5%A4%8D%E7%9B%98/
 https://zhulaoqi.github.io/2023/08/25/2023/08/%E9%A3%9E%E4%B9%A6%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85/
 https://zhulaoqi.github.io/README.html
 https://zhulaoqi.github.io/tags/index.html
@@ -8,5 +10,15 @@ https://zhulaoqi.github.io/about/index.html
 https://zhulaoqi.github.io/archives/index.html
 https://zhulaoqi.github.io/2023/08/24/hello-world/
 https://zhulaoqi.github.io/
+https://zhulaoqi.github.io/tags/Hexo/
+https://zhulaoqi.github.io/tags/%E5%8D%9A%E5%AE%A2/
+https://zhulaoqi.github.io/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/
+https://zhulaoqi.github.io/tags/AI/
+https://zhulaoqi.github.io/tags/RAG/
+https://zhulaoqi.github.io/tags/LangChain/
+https://zhulaoqi.github.io/tags/MCP/
+https://zhulaoqi.github.io/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/
 https://zhulaoqi.github.io/tags/%E6%8A%80%E6%9C%AF%E8%AE%BE%E8%AE%A1/
+https://zhulaoqi.github.io/categories/%E5%AE%9E%E7%94%A8%E6%8C%87%E5%8D%97/
+https://zhulaoqi.github.io/categories/%E6%8A%80%E6%9C%AF%E6%80%9D%E8%80%83/
 https://zhulaoqi.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/

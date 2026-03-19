@@ -19,6 +19,293 @@ More info: Deployment
 ]]></content>
   </entry>
   <entry>
+    <title>Hexo博客快速写作与发布指南</title>
+    <url>/2026/03/19/Hexo%E5%8D%9A%E5%AE%A2%E5%BF%AB%E9%80%9F%E5%86%99%E4%BD%9C%E4%B8%8E%E5%8F%91%E5%B8%83%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[这是一份写给自己的备忘录：如何在这个 Hexo + NexT 博客中用最短路径完成”写文章 → 本地预览 → 发布上线”的全流程。
+
+
+一、30 秒发布一篇文章最快的路径，只需要三条命令：
+# 1. 新建文章（自动生成 md 文件和 front-matter）npx hexo new &quot;你的文章标题&quot;# 2. 用你喜欢的编辑器写文章# 文件在 source/_posts/你的文章标题.md# 3. 一键部署上线npx hexo clean &amp;&amp; npx hexo deploy
+
+没了。等 1-2 分钟 GitHub Pages 缓存刷新，线上就能看到。
+二、文章模板（Front-matter）每篇文章头部的 YAML 配置决定了文章的元信息：
+---title: 文章标题author: Kinch.zhudate: 2026-03-19 12:00:00tags:  - 标签1  - 标签2categories: 分类名---这里是文章正文...&lt;!-- more --&gt;   ← 这行以上的内容会显示在首页作为摘要
+
+常用分类参考：
+
+技术思考 — 架构设计、技术趋势分析
+设计文档 — 技术方案、系统设计
+实用指南 — 教程、备忘录
+踩坑记录 — Bug 修复、问题排查
+
+三、完整工作流3.1 写作阶段# 新建文章npx hexo new &quot;文章标题&quot;# 新建草稿（不会发布，适合未完成的文章）npx hexo new draft &quot;草稿标题&quot;# 草稿写完后发布（从 _drafts 移到 _posts）npx hexo publish &quot;草稿标题&quot;
+
+3.2 本地预览# 启动本地服务器（支持热重载，改完文件刷新即可）npx hexo server# 浏览器打开 http://localhost:4000# 写完后 Ctrl+C 停止
+
+3.3 部署上线# 清理 + 部署（推荐每次都 clean）npx hexo clean &amp;&amp; npx hexo deploy# 如果只想生成静态文件但不部署npx hexo generate
+
+3.4 一条龙命令把预览和部署合成一条：
+# 预览满意后直接部署npx hexo clean &amp;&amp; npx hexo generate &amp;&amp; npx hexo deploy
+
+四、Markdown 写作技巧4.1 图片管理推荐两种方式：
+方式一：放在 source&#x2F;images&#x2F; 目录
+![图片描述](/images/my-image.png)
+
+方式二：使用图床（推荐）使用 PicGo 等工具上传到 GitHub&#x2F;OSS 图床，获取外链直接引用。避免仓库体积膨胀。
+
+⚠️ 不要使用 Typora 的本地绝对路径（如 /Users/xxx/Library/...），部署后图片会 404。
+
+4.2 代码块```javascriptconst hello = &quot;world&quot;;```
+
+支持的语言高亮：javascript、python、bash、java、sql、yaml、json 等。
+4.3 表格| 列1 | 列2 | 列3 ||-----|-----|-----|| A   | B   | C   |
+
+4.4 数学公式本博客已配置 MathJax，直接使用 LaTeX 语法：
+行内公式：$E = mc^2$独立公式：$$\sum_&#123;i=1&#125;^&#123;n&#125; x_i$$
+
+五、项目结构速查githubBlog/├── _config.yml              # Hexo 主配置（站点信息、部署配置）├── themes/next/_config.yml  # NexT 主题配置（样式、功能开关）├── source/│   ├── _posts/              # ✏️ 文章放这里│   ├── _drafts/             # 📝 草稿放这里│   ├── _data/               # 🎨 自定义样式/模板│   ├── images/              # 🖼️ 图片资源│   ├── about/               # 关于页│   ├── tags/                # 标签页│   ├── categories/          # 分类页│   └── schedule/            # 日程页├── scaffolds/               # 文章模板│   ├── post.md              # hexo new 用的模板│   ├── draft.md             # hexo new draft 用的模板│   └── page.md              # hexo new page 用的模板└── public/                  # 生成的静态文件（不要手动改）
+
+六、常见问题Q: 部署后线上没更新？A: 检查两件事：① _config.yml 的 deploy.branch 是否与 GitHub 仓库默认分支一致；② GitHub Pages 有 1-2 分钟缓存，等一等或强制刷新（Ctrl+Shift+R）。
+Q: 本地预览正常但部署后样式丢失？A: 检查 _config.yml 中的 url 和 root 是否正确配置了你的 GitHub Pages 地址。
+Q: 怎么删除一篇文章？A: 直接删除 source/_posts/ 下对应的 .md 文件，然后重新部署。
+Q: 想改博客样式？A: 编辑 source/_data/styles.styl，不要直接改 themes/next/ 里的文件。
+
+保持写作，保持输出。最好的笔记系统是你真正在用的那一个。
+]]></content>
+      <categories>
+        <category>实用指南</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+        <tag>效率工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RAG已死？LangChain过时？一个高级工程师的冷静复盘</title>
+    <url>/2026/03/19/RAG%E5%B7%B2%E6%AD%BB-LangChain%E8%BF%87%E6%97%B6-%E4%B8%80%E4%B8%AA%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%86%B7%E9%9D%99%E5%A4%8D%E7%9B%98/</url>
+    <content><![CDATA[2024 年底到 2026 年初，AI 工程领域经历了一场剧烈的范式震荡。Gemini 把上下文窗口推到了 1M+ tokens，Anthropic 发布了 MCP（Model Context Protocol），OpenAI 的 Function Calling 成为事实标准，Cursor&#x2F;Windsurf 等 AI IDE 用 Skills + Prompt 的方式重新定义了工程效率。
+于是那两个曾经的”当红炸子鸡”被推上了审判席：RAG 是不是已经消亡了？LangChain 是不是彻底过时了？
+作为一个在生产环境中踩过这两个坑、也用它们交付过项目的工程师，我想给一个不那么情绪化的答案。
+
+
+一、先说结论
+
+
+技术
+判决
+一句话总结
+
+
+
+Naive RAG
+☠️ 已死
+把文档切片扔向量库然后祈祷的时代结束了
+
+
+Advanced RAG
+✅ 活着且在进化
+GraphRAG、Agentic RAG、Hybrid Search 正当壮年
+
+
+LangChain
+⚠️ 重度过时
+90% 的场景不再需要它，但 LangGraph 还有一席之地
+
+
+MCP
+🚀 新基建
+正在成为 LLM 工具调用的 USB-C 接口
+
+
+Prompt&#x2F;Skills
+🔥 主流范式
+Context Engineering 才是 2026 年的核心能力
+
+
+二、RAG：不是死了，是脱胎换骨了2.1 Naive RAG 的死因2023 年的标准 RAG pipeline 长这样：
+文档 → 切片(512 tokens) → Embedding → 向量库 → Top-K 召回 → 拼到 Prompt → LLM 生成
+
+这个 pipeline 在生产中暴露了三个致命问题：
+第一，切片即失忆。 一份 50 页的技术方案被切成 100 个 chunk 后，跨章节的逻辑关系全部丢失。你问”方案的整体架构是什么”，检索回来的是三段不相干的文字碎片。
+第二，Top-K 是赌博。 语义相似度 ≠ 问题相关度。用户问”系统的瓶颈在哪”，召回的可能是包含”瓶颈”这个词但讨论完全不同主题的段落。
+第三，长上下文窗口来了。 当 Gemini 1.5 Pro 能吃下 1M tokens 的时候，很多人的第一反应是——还要什么 RAG？直接把整个文档塞进去不就完了？
+2.2 但长上下文并不是银弹先看一组实测数据：
+
+
+
+指标
+RAG (检索+生成)
+长上下文 (全量灌入)
+
+
+
+平均延迟
+~1s
+~45s
+
+
+单次成本(100K tokens 文档)
+~$0.01
+~$0.30
+
+
+“Lost in the Middle” 准确率衰减
+无（精准定位）
+30%+ 衰减
+
+
+动态知识更新
+实时
+需重新加载全量
+
+
+可溯源性
+天然支持引用来源
+几乎不可能
+
+
+关键发现： 前沿模型在超过 32K-64K tokens 后，注意力开始严重衰减。所谓的 1M 上下文窗口，在”大海捞针”测试中表现优秀，但在真实的多跳推理场景中远不如预期。
+长上下文窗口解决的是**”我有一份完整文档想让 AI 理解”的问题。RAG 解决的是“我有 10TB 的知识库，需要秒级精准定位”**的问题。两者解决的根本不是同一个问题。
+2.3 2026 年 RAG 的真实形态如果你还在用 2023 年的 Naive RAG 架构，那确实该淘汰了。现代 RAG 已经进化成了这样：
+┌─────────────────────────────────────────────┐│              Agentic RAG Pipeline            │├─────────────────────────────────────────────┤│                                             ││  Query → Query Rewrite → Router             ││            ↓                                ││  ┌── Vector Search (语义检索)                ││  ├── BM25/Full-Text (关键词检索)             ││  ├── Knowledge Graph (图谱推理)              ││  └── SQL/API (结构化查询)                    ││            ↓                                ││  Reranker (Cross-Encoder 精排)              ││            ↓                                ││  Context Compression (上下文压缩)            ││            ↓                                ││  LLM Generation + Citation                  ││            ↓                                ││  Self-Reflection (结果自检)                  ││            ↓                                ││  如果不满意 → 重新检索 (循环)                │└─────────────────────────────────────────────┘
+
+核心变化：
+
+Hybrid Search：向量检索 + BM25 + 知识图谱的混合检索，互相补位
+Agentic 循环：检索结果不满意？自动改写 query 重新来
+Reranker：Cross-Encoder 对初筛结果精排，干掉”语义相似但不相关”的噪声
+GraphRAG：用知识图谱保留文档间的逻辑关系，解决切片失忆问题
+
+我的判断：RAG 没有死，Naive RAG 死了。现代 RAG 是一个检索工程+LLM 编排的系统工程，不是一个 pip install 就能搞定的玩具。
+三、LangChain：从”万能框架”到”过度工程”3.1 LangChain 的问题出在哪我在 2023 年用 LangChain 做过两个项目。说实话，第一个月很爽——开箱即用，chain 一串就跑。第三个月开始痛苦——调试像噩梦，抽象层层嵌套，一个简单的 API 调用被包了五层。
+LangChain 的核心问题：
+过度抽象。 为了追求通用性，LangChain 把每个概念都抽象了一层又一层。你想调用一个 OpenAI API，需要经过 ChatOpenAI → BaseChatModel → BaseLanguageModel → Runnable 四层继承。调试时 stack trace 长到怀疑人生。
+实测对比——用 MCP 和 LangChain 实现同一个功能：
+# LangChain: 数据库查询 Agent（约 60 行）from langchain.agents import create_sql_agentfrom langchain.agents.agent_toolkits import SQLDatabaseToolkitfrom langchain.sql_database import SQLDatabasefrom langchain.chat_models import ChatOpenAIfrom langchain.agents.agent_types import AgentTypedb = SQLDatabase.from_uri(&quot;postgresql://...&quot;)llm = ChatOpenAI(model=&quot;gpt-4&quot;, temperature=0)toolkit = SQLDatabaseToolkit(db=db, llm=llm)agent = create_sql_agent(    llm=llm,    toolkit=toolkit,    agent_type=AgentType.OPENAI_FUNCTIONS,    verbose=True)result = agent.run(&quot;最近一周的订单总额是多少？&quot;)
+
+# MCP: 同样的功能（约 15 行）# MCP Server 暴露 SQL 工具，任何 LLM 客户端直接调用# 无需框架，无需 toolkit 抽象import anthropicclient = anthropic.Client()response = client.messages.create(    model=&quot;claude-sonnet-4-20250514&quot;,    tools=[&#123;  # MCP 工具自动发现，这里手动示意        &quot;name&quot;: &quot;query_database&quot;,        &quot;description&quot;: &quot;执行 SQL 查询&quot;,        &quot;input_schema&quot;: &#123;&quot;type&quot;: &quot;object&quot;, &quot;properties&quot;: &#123;&quot;sql&quot;: &#123;&quot;type&quot;: &quot;string&quot;&#125;&#125;&#125;    &#125;],    messages=[&#123;&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;最近一周的订单总额是多少？&quot;&#125;])
+
+MCP 方案代码量是 LangChain 的 1&#x2F;4，开发效率快 3 倍，而且不绑定任何特定框架。
+3.2 LangChain 还有什么价值说句公道话，LangChain 并非一无是处：
+
+LangGraph：专注于有状态的多步骤 Agent 工作流编排，这一块确实做得不错
+LangSmith：LLM 应用的可观测性平台，在生产监控方面有独到价值
+教学价值：对于理解 LLM 应用架构的概念模型仍有参考意义
+
+但核心的 Chain&#x2F;Agent 抽象层，在 2026 年的生产环境中已经是负资产。
+四、2026 年的技术棋盘：谁在取代谁4.1 全景对比
+
+
+维度
+RAG
+LangChain
+MCP
+Function Calling
+Prompt&#x2F;Skills
+
+
+
+本质
+知识检索增强
+应用开发框架
+工具调用协议
+API 原生能力
+上下文工程
+
+
+解决什么
+LLM 不知道的知识
+胶水代码
+工具互联互通
+单次工具调用
+引导 LLM 行为
+
+
+复杂度
+中-高
+高
+低
+极低
+低-中
+
+
+厂商锁定
+无
+轻度
+无
+重度
+无
+
+
+生产就绪
+✅
+⚠️
+✅
+✅
+✅
+
+
+2026 趋势
+进化中
+萎缩中
+快速扩张
+稳定
+主流化
+
+
+4.2 MCP：LLM 世界的 USB-CMCP 之所以重要，是因为它解决了一个之前被忽视的架构问题：每个 AI 应用都在重新发明轮子来连接外部工具。
+在 MCP 之前，你要让 LLM 读数据库、查日历、操作文件，每个集成都要自己写 adapter。LangChain 试图用”Toolkit”抽象解决这个问题，但本质上是把一堆 adapter 打包进一个框架。
+MCP 的做法是定义协议而非框架：
+
+Server 暴露工具和资源（标准化接口）
+Client 自动发现和调用（运行时发现，不是编译时绑定）
+与具体 LLM 无关（Claude、GPT、Gemini 都能用）
+
+这就像 USB-C 之于各种充电线——不是又造了一根线，而是让所有线都用同一个口。
+4.3 Prompt Engineering → Context Engineering2026 年最重要的认知升级是：我们谈论的不再是”Prompt Engineering”，而是”Context Engineering”。
+Context Engineering 是对喂给 LLM 的所有 token 的系统性设计——包括：
+Context = System Prompt        + Tool Definitions (MCP/Function Calling)        + Retrieved Knowledge (RAG)        + Conversation History (Memory)        + User Instructions        + Skills/Rules (行为规范)        + Few-shot Examples
+
+Cursor 的 Skills 机制就是一个绝佳案例：你不需要 RAG 去检索”如何写 React 组件”，你只需要一个 .cursor/rules/react.md 文件告诉 AI”我们项目的 React 规范是这样的”。这就是 Context Engineering——用最少的 token 给 AI 最精准的上下文。
+4.4 实战决策树面对一个具体需求，怎么选技术方案？
+你的 AI 应用需要外部知识吗？├── 不需要 → 纯 Prompt/Skills 就够了│├── 需要，但知识量 &lt; 100K tokens│   └── 直接塞进长上下文窗口，不需要 RAG│├── 需要，知识量大、需要实时更新│   └── 现代 RAG (Hybrid Search + Reranker + Agentic)│└── 需要调用外部工具/API？    ├── 单个 API、简单场景 → Function Calling    ├── 多工具、跨系统集成 → MCP    └── 复杂多步骤工作流 → LangGraph (不是 LangChain)
+
+五、给工程师的务实建议5.1 现在该学什么
+Context Engineering：这是 2026 年 AI 工程师的核心技能。理解如何设计 System Prompt、如何编排 Tool Definitions、如何管理上下文窗口
+MCP 协议：学会写 MCP Server，这是未来工具集成的标准方式
+现代检索工程：如果你要做 RAG，学 Hybrid Search + Reranker + Knowledge Graph，别停留在 naive vector search
+直接调 SDK：大多数场景直接用 OpenAI&#x2F;Anthropic SDK + Function Calling 就够了，不需要框架
+
+5.2 现在该扔什么
+扔掉 Naive RAG pipeline——切片+向量搜索+Top-K 的原始方案
+扔掉 LangChain 的 Chain&#x2F;Agent 抽象——直接用 SDK 或 MCP
+扔掉”一个框架解决所有问题”的思维——组合轻量工具比全家桶更灵活
+扔掉”Prompt Engineering 就是写 prompt”的认知——升级到 Context Engineering
+
+5.3 别犯的错误
+别因为有了长上下文就不做 RAG：10TB 的企业知识库不可能全塞进去
+别因为 LangChain 过时就否定框架的价值：LangGraph 在复杂工作流编排中仍然有用
+别追新概念忘了基本功：好的检索工程、好的 prompt 设计、好的系统架构，这些永远是基本盘
+
+六、最后技术世界没有”已死”或”永生”，只有适配度。RAG 在它擅长的场景依然不可替代，LangChain 在大多数场景确实过度工程了，MCP 和 Context Engineering 正在成为新的基础设施。
+作为工程师，最危险的不是用了”过时”的技术，而是用了”不匹配”的技术。在你的场景里，什么方案能用最少的复杂度解决问题，什么就是最好的方案。
+不要信仰技术，要信仰 trade-off。
+
+本文基于 2026 年 3 月的技术生态撰写，AI 领域变化极快，半年后可能又是另一番景象。保持学习，保持怀疑。
+]]></content>
+      <categories>
+        <category>技术思考</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>RAG</tag>
+        <tag>LangChain</tag>
+        <tag>MCP</tag>
+        <tag>架构设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>飞书机器人消息订阅1</title>
     <url>/2023/08/25/2023/08/%E9%A3%9E%E4%B9%A6%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85/</url>
     <content><![CDATA[
