@@ -110,27 +110,6 @@
 
   
   <url>
-    <loc>https://zhulaoqi.github.io/tags/Hexo/</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhulaoqi.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://zhulaoqi.github.io/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://zhulaoqi.github.io/tags/AI/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -166,6 +145,27 @@
   </url>
   
   <url>
+    <loc>https://zhulaoqi.github.io/tags/Hexo/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhulaoqi.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhulaoqi.github.io/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://zhulaoqi.github.io/tags/%E6%8A%80%E6%9C%AF%E8%AE%BE%E8%AE%A1/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -175,14 +175,14 @@
 
   
   <url>
-    <loc>https://zhulaoqi.github.io/categories/%E5%AE%9E%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://zhulaoqi.github.io/categories/%E6%8A%80%E6%9C%AF%E6%80%9D%E8%80%83/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://zhulaoqi.github.io/categories/%E6%8A%80%E6%9C%AF%E6%80%9D%E8%80%83/</loc>
+    <loc>https://zhulaoqi.github.io/categories/%E5%AE%9E%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

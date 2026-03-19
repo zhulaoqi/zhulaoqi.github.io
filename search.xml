@@ -1,87 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/08/24/hello-world/</url>
-    <content><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post$ hexo new &quot;My New Post&quot;
-
-More info: Writing
-Run server$ hexo server
-
-More info: Server
-Generate static files$ hexo generate
-
-More info: Generating
-Deploy to remote sites$ hexo deploy
-
-More info: Deployment
-]]></content>
-  </entry>
-  <entry>
-    <title>Hexo博客快速写作与发布指南</title>
-    <url>/2026/03/19/Hexo%E5%8D%9A%E5%AE%A2%E5%BF%AB%E9%80%9F%E5%86%99%E4%BD%9C%E4%B8%8E%E5%8F%91%E5%B8%83%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[这是一份写给自己的备忘录：如何在这个 Hexo + NexT 博客中用最短路径完成”写文章 → 本地预览 → 发布上线”的全流程。
-
-
-一、30 秒发布一篇文章最快的路径，只需要三条命令：
-# 1. 新建文章（自动生成 md 文件和 front-matter）npx hexo new &quot;你的文章标题&quot;# 2. 用你喜欢的编辑器写文章# 文件在 source/_posts/你的文章标题.md# 3. 一键部署上线npx hexo clean &amp;&amp; npx hexo deploy
-
-没了。等 1-2 分钟 GitHub Pages 缓存刷新，线上就能看到。
-二、文章模板（Front-matter）每篇文章头部的 YAML 配置决定了文章的元信息：
----title: 文章标题author: Kinch.zhudate: 2026-03-19 12:00:00tags:  - 标签1  - 标签2categories: 分类名---这里是文章正文...&lt;!-- more --&gt;   ← 这行以上的内容会显示在首页作为摘要
-
-常用分类参考：
-
-技术思考 — 架构设计、技术趋势分析
-设计文档 — 技术方案、系统设计
-实用指南 — 教程、备忘录
-踩坑记录 — Bug 修复、问题排查
-
-三、完整工作流3.1 写作阶段# 新建文章npx hexo new &quot;文章标题&quot;# 新建草稿（不会发布，适合未完成的文章）npx hexo new draft &quot;草稿标题&quot;# 草稿写完后发布（从 _drafts 移到 _posts）npx hexo publish &quot;草稿标题&quot;
-
-3.2 本地预览# 启动本地服务器（支持热重载，改完文件刷新即可）npx hexo server# 浏览器打开 http://localhost:4000# 写完后 Ctrl+C 停止
-
-3.3 部署上线# 清理 + 部署（推荐每次都 clean）npx hexo clean &amp;&amp; npx hexo deploy# 如果只想生成静态文件但不部署npx hexo generate
-
-3.4 一条龙命令把预览和部署合成一条：
-# 预览满意后直接部署npx hexo clean &amp;&amp; npx hexo generate &amp;&amp; npx hexo deploy
-
-四、Markdown 写作技巧4.1 图片管理推荐两种方式：
-方式一：放在 source&#x2F;images&#x2F; 目录
-![图片描述](/images/my-image.png)
-
-方式二：使用图床（推荐）使用 PicGo 等工具上传到 GitHub&#x2F;OSS 图床，获取外链直接引用。避免仓库体积膨胀。
-
-⚠️ 不要使用 Typora 的本地绝对路径（如 /Users/xxx/Library/...），部署后图片会 404。
-
-4.2 代码块```javascriptconst hello = &quot;world&quot;;```
-
-支持的语言高亮：javascript、python、bash、java、sql、yaml、json 等。
-4.3 表格| 列1 | 列2 | 列3 ||-----|-----|-----|| A   | B   | C   |
-
-4.4 数学公式本博客已配置 MathJax，直接使用 LaTeX 语法：
-行内公式：$E = mc^2$独立公式：$$\sum_&#123;i=1&#125;^&#123;n&#125; x_i$$
-
-五、项目结构速查githubBlog/├── _config.yml              # Hexo 主配置（站点信息、部署配置）├── themes/next/_config.yml  # NexT 主题配置（样式、功能开关）├── source/│   ├── _posts/              # ✏️ 文章放这里│   ├── _drafts/             # 📝 草稿放这里│   ├── _data/               # 🎨 自定义样式/模板│   ├── images/              # 🖼️ 图片资源│   ├── about/               # 关于页│   ├── tags/                # 标签页│   ├── categories/          # 分类页│   └── schedule/            # 日程页├── scaffolds/               # 文章模板│   ├── post.md              # hexo new 用的模板│   ├── draft.md             # hexo new draft 用的模板│   └── page.md              # hexo new page 用的模板└── public/                  # 生成的静态文件（不要手动改）
-
-六、常见问题Q: 部署后线上没更新？A: 检查两件事：① _config.yml 的 deploy.branch 是否与 GitHub 仓库默认分支一致；② GitHub Pages 有 1-2 分钟缓存，等一等或强制刷新（Ctrl+Shift+R）。
-Q: 本地预览正常但部署后样式丢失？A: 检查 _config.yml 中的 url 和 root 是否正确配置了你的 GitHub Pages 地址。
-Q: 怎么删除一篇文章？A: 直接删除 source/_posts/ 下对应的 .md 文件，然后重新部署。
-Q: 想改博客样式？A: 编辑 source/_data/styles.styl，不要直接改 themes/next/ 里的文件。
-
-保持写作，保持输出。最好的笔记系统是你真正在用的那一个。
-]]></content>
-      <categories>
-        <category>实用指南</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-        <tag>效率工具</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RAG已死？LangChain过时？一个高级工程师的冷静复盘</title>
     <url>/2026/03/19/RAG%E5%B7%B2%E6%AD%BB-LangChain%E8%BF%87%E6%97%B6-%E4%B8%80%E4%B8%AA%E9%AB%98%E7%BA%A7%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%86%B7%E9%9D%99%E5%A4%8D%E7%9B%98/</url>
     <content><![CDATA[2024 年底到 2026 年初，AI 工程领域经历了一场剧烈的范式震荡。Gemini 把上下文窗口推到了 1M+ tokens，Anthropic 发布了 MCP（Model Context Protocol），OpenAI 的 Function Calling 成为事实标准，Cursor&#x2F;Windsurf 等 AI IDE 用 Skills + Prompt 的方式重新定义了工程效率。
@@ -304,6 +223,87 @@ MCP 协议：学会写 MCP Server，这是未来工具集成的标准方式
         <tag>MCP</tag>
         <tag>架构设计</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客快速写作与发布指南</title>
+    <url>/2026/03/19/Hexo%E5%8D%9A%E5%AE%A2%E5%BF%AB%E9%80%9F%E5%86%99%E4%BD%9C%E4%B8%8E%E5%8F%91%E5%B8%83%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[这是一份写给自己的备忘录：如何在这个 Hexo + NexT 博客中用最短路径完成”写文章 → 本地预览 → 发布上线”的全流程。
+
+
+一、30 秒发布一篇文章最快的路径，只需要三条命令：
+# 1. 新建文章（自动生成 md 文件和 front-matter）npx hexo new &quot;你的文章标题&quot;# 2. 用你喜欢的编辑器写文章# 文件在 source/_posts/你的文章标题.md# 3. 一键部署上线npx hexo clean &amp;&amp; npx hexo deploy
+
+没了。等 1-2 分钟 GitHub Pages 缓存刷新，线上就能看到。
+二、文章模板（Front-matter）每篇文章头部的 YAML 配置决定了文章的元信息：
+---title: 文章标题author: Kinch.zhudate: 2026-03-19 12:00:00tags:  - 标签1  - 标签2categories: 分类名---这里是文章正文...&lt;!-- more --&gt;   ← 这行以上的内容会显示在首页作为摘要
+
+常用分类参考：
+
+技术思考 — 架构设计、技术趋势分析
+设计文档 — 技术方案、系统设计
+实用指南 — 教程、备忘录
+踩坑记录 — Bug 修复、问题排查
+
+三、完整工作流3.1 写作阶段# 新建文章npx hexo new &quot;文章标题&quot;# 新建草稿（不会发布，适合未完成的文章）npx hexo new draft &quot;草稿标题&quot;# 草稿写完后发布（从 _drafts 移到 _posts）npx hexo publish &quot;草稿标题&quot;
+
+3.2 本地预览# 启动本地服务器（支持热重载，改完文件刷新即可）npx hexo server# 浏览器打开 http://localhost:4000# 写完后 Ctrl+C 停止
+
+3.3 部署上线# 清理 + 部署（推荐每次都 clean）npx hexo clean &amp;&amp; npx hexo deploy# 如果只想生成静态文件但不部署npx hexo generate
+
+3.4 一条龙命令把预览和部署合成一条：
+# 预览满意后直接部署npx hexo clean &amp;&amp; npx hexo generate &amp;&amp; npx hexo deploy
+
+四、Markdown 写作技巧4.1 图片管理推荐两种方式：
+方式一：放在 source&#x2F;images&#x2F; 目录
+![图片描述](/images/my-image.png)
+
+方式二：使用图床（推荐）使用 PicGo 等工具上传到 GitHub&#x2F;OSS 图床，获取外链直接引用。避免仓库体积膨胀。
+
+⚠️ 不要使用 Typora 的本地绝对路径（如 /Users/xxx/Library/...），部署后图片会 404。
+
+4.2 代码块```javascriptconst hello = &quot;world&quot;;```
+
+支持的语言高亮：javascript、python、bash、java、sql、yaml、json 等。
+4.3 表格| 列1 | 列2 | 列3 ||-----|-----|-----|| A   | B   | C   |
+
+4.4 数学公式本博客已配置 MathJax，直接使用 LaTeX 语法：
+行内公式：$E = mc^2$独立公式：$$\sum_&#123;i=1&#125;^&#123;n&#125; x_i$$
+
+五、项目结构速查githubBlog/├── _config.yml              # Hexo 主配置（站点信息、部署配置）├── themes/next/_config.yml  # NexT 主题配置（样式、功能开关）├── source/│   ├── _posts/              # ✏️ 文章放这里│   ├── _drafts/             # 📝 草稿放这里│   ├── _data/               # 🎨 自定义样式/模板│   ├── images/              # 🖼️ 图片资源│   ├── about/               # 关于页│   ├── tags/                # 标签页│   ├── categories/          # 分类页│   └── schedule/            # 日程页├── scaffolds/               # 文章模板│   ├── post.md              # hexo new 用的模板│   ├── draft.md             # hexo new draft 用的模板│   └── page.md              # hexo new page 用的模板└── public/                  # 生成的静态文件（不要手动改）
+
+六、常见问题Q: 部署后线上没更新？A: 检查两件事：① _config.yml 的 deploy.branch 是否与 GitHub 仓库默认分支一致；② GitHub Pages 有 1-2 分钟缓存，等一等或强制刷新（Ctrl+Shift+R）。
+Q: 本地预览正常但部署后样式丢失？A: 检查 _config.yml 中的 url 和 root 是否正确配置了你的 GitHub Pages 地址。
+Q: 怎么删除一篇文章？A: 直接删除 source/_posts/ 下对应的 .md 文件，然后重新部署。
+Q: 想改博客样式？A: 编辑 source/_data/styles.styl，不要直接改 themes/next/ 里的文件。
+
+保持写作，保持输出。最好的笔记系统是你真正在用的那一个。
+]]></content>
+      <categories>
+        <category>实用指南</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+        <tag>效率工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/08/24/hello-world/</url>
+    <content><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server$ hexo server
+
+More info: Server
+Generate static files$ hexo generate
+
+More info: Generating
+Deploy to remote sites$ hexo deploy
+
+More info: Deployment
+]]></content>
   </entry>
   <entry>
     <title>飞书机器人消息订阅1</title>
