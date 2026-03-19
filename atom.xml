@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>花田半亩</title>
   
-  <subtitle>我们的一生是被欺骗的一生。在叠错的谎言中，悲伤莫名，幸福莫名</subtitle>
+  
   <link href="https://zhulaoqi.github.io/atom.xml" rel="self"/>
   
   <link href="https://zhulaoqi.github.io/"/>
@@ -18,10 +18,12 @@
   
   <entry>
     <title>飞书机器人消息订阅1</title>
-    <link href="https://zhulaoqi.github.io/2023/08/25/%E9%A3%9E%E4%B9%A6%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85/"/>
-    <id>https://zhulaoqi.github.io/2023/08/25/%E9%A3%9E%E4%B9%A6%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85/</id>
+    <link href="https://zhulaoqi.github.io/2023/08/25/2023/08/%E9%A3%9E%E4%B9%A6%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85/"/>
+    <id>https://zhulaoqi.github.io/2023/08/25/2023/08/%E9%A3%9E%E4%B9%A6%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B6%88%E6%81%AF%E8%AE%A2%E9%98%85/</id>
     <published>2023-08-25T10:47:32.000Z</published>
     <updated>2023-08-25T10:54:22.160Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>背景</p><p>知识库Ai回答现在采用了和机器人直接对话的技术实现方式，为了支持后期知识库回答准确性做优化依据，现在需要将各个用户跟机器人的对话消息按照对话的方式，以时间单位作为切分进行存储并做合理展示，实现高效协同持续优化的目的</p></blockquote><h1 id="术语规范"><a href="#术语规范" class="headerlink" title="术语规范"></a>术语规范</h1><table><thead><tr><th>名词</th><th>英文表示</th><th>描述</th></tr></thead><tbody><tr><td>日期</td><td>msgDate</td><td>一个会话时间段，从开始对话到对话结束十分钟</td></tr><tr><td>sessionid</td><td>sessionId</td><td>后端主动生成的唯一ID</td></tr></tbody></table><h1 id="接口列表"><a href="#接口列表" class="headerlink" title="接口列表"></a>接口列表</h1><ul><li>获取会话记录列表</li><li>获取当前会话中的消息记录</li></ul><h1 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h1><p><a href="https://open.feishu.cn/document/server-docs/im-v1/message/list">获取会话历史消息 - 服务端 API - 开发文档 - 飞书开放平台</a></p><p>以上为飞书开放API获取历史消息</p><h1 id="消息AI回答时序"><a href="#消息AI回答时序" class="headerlink" title="消息AI回答时序"></a>消息AI回答时序</h1><p>![image-20230825185217814](&#x2F;Users&#x2F;zhujinqi&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20230825185217814.png)</p><h1 id="消息记录流程"><a href="#消息记录流程" class="headerlink" title="消息记录流程"></a>消息记录流程</h1><p>![image-20230825185255613](&#x2F;Users&#x2F;zhujinqi&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20230825185255613.png)</p><h1 id="工作内容"><a href="#工作内容" class="headerlink" title="工作内容"></a>工作内容</h1><h2 id="技术设施准备"><a href="#技术设施准备" class="headerlink" title="技术设施准备"></a>技术设施准备</h2><ul><li>表设计、创建</li><li>基础代码开发</li></ul><h2 id="代码逻辑开发"><a href="#代码逻辑开发" class="headerlink" title="代码逻辑开发"></a>代码逻辑开发</h2><ol><li>数据存储逻辑开发</li><li>展示接口开发</li><li>展示页面开发</li></ol><h1 id="补偿方案"><a href="#补偿方案" class="headerlink" title="补偿方案"></a>补偿方案</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd logs/data</span><br><span class="line">pwd</span><br><span class="line">/dianyi/app/bugoo/logs/data</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/dianyi/app/bugoo/logs/data/data.json</span><br></pre></td></tr></table></figure>]]></content>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -46,7 +48,14 @@
 &lt;td&gt;sessionId&lt;/td&gt;
 &lt;td&gt;后端主动生成的唯一ID&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;</summary>
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;h1 id=&quot;接口列表&quot;&gt;&lt;a href=&quot;#接口列表&quot; class=&quot;headerlink&quot; title=&quot;接口列表&quot;&gt;&lt;/a&gt;接口列表&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;获取会话记录列表&lt;/li&gt;
+&lt;li&gt;获取当前会话中的消息记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;实现方式&quot;&gt;&lt;a href=&quot;#实现方式&quot; class=&quot;headerlink&quot; title=&quot;实现方式&quot;&gt;&lt;/a&gt;实现方式&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://open.feishu.cn/document/server-docs/im-v1/message/list&quot;&gt;获取会话历史消息 - 服务端 API - 开发文档 - 飞书开放平台&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以上为飞书开放API获取历史消息&lt;/p&gt;
+&lt;h1 id=&quot;消息AI回答时序&quot;&gt;&lt;a href=&quot;#消息AI回答时序&quot; class=&quot;headerlink&quot; title=&quot;消息AI回答时序&quot;&gt;&lt;/a&gt;消息AI回答时序&lt;/h1&gt;&lt;p&gt;![image-20230825185217814](&amp;#x2F;Users&amp;#x2F;zhujinqi&amp;#x2F;Library&amp;#x2F;Application Support&amp;#x2F;typora-user-images&amp;#x2F;image-20230825185217814.png)&lt;/p&gt;</summary>
     
     
     
@@ -64,9 +73,17 @@
     <published>2023-08-24T02:28:16.971Z</published>
     <updated>2023-08-24T02:28:16.971Z</updated>
     
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
     
     <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;</summary>
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
     
     
     
